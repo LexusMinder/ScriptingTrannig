@@ -1,0 +1,28 @@
+1) * operator
+    "hello" value
+    -88.8 value
+    - operator
+    / operator
+    + operator
+    5 value
+
+2) spam variable
+    "spam" string
+
+3) string, int, float
+
+4) es el mas basico tipo de instruccion en un lengauje, consite de dos valores
+y operadores
+
+5) De una variable, signo de igual y valor
+
+6) 21
+
+7) spamspamspam
+
+8) porque la variable eggs sigues la reglas de definicion de variables, y 100 no 
+una varible no de emepezar con numero es python
+
+9) int(), str() and float()
+
+10) "I have eaten " + str(99) " burritos."

