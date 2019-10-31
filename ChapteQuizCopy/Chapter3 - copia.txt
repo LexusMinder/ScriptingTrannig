@@ -1,0 +1,17 @@
+1) Permiten tener mas organizado nuestro codigo
+2) Cuando la funcion es llamada
+3) def funciontion: 
+         code block
+4) Una funcion es donde se define una serie de instrucciones, y una llamada
+a funcion la ejecuta pasado o no parametros
+5) Solo un global scope y de zero a mas local scopes
+6) La variable se destruye o sea se pierde su valor
+7) Es un valor o variable que arroja su funcion al final de esta, si puede
+8) None
+9) si al poner global antes de trabajar con esta dentro de la funcion
+10) NoneType
+11) 
+12) spam.bacon()
+13) con try and catch
+14) en try el codigo que pudiera tener un error y en catch como manejar ese
+error

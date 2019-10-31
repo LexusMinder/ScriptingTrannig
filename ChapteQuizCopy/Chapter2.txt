@@ -1,0 +1,32 @@
+1) True and False, 
+2) AND, OR & NOT
+3) 
+4)False
+   False
+   True
+   False
+   False
+   True
+5) <,>,=<,=>,==,!=
+6) El operador de igualdad compara dos valores ha que sean iguales
+y el operador de asignacion le da a una variable un valor
+7) Es una flujo de selecion en un programa, se uso al momento de 
+realizar una decision
+8) 
+9) if spam == 1:
+        print("Hello")
+    elif spam == 2: 
+        print("Howdy")
+    else:
+        print("Greetings")
+10) ctrl + d 
+11) break sale del loop y continue reinicia el loop
+12) range(10) val del 0 al 10, range(0,10) especificamente le dices que empiece 
+en el zero, y (0,10,1) le dices que empiece de 0 a 10 y que vaya de uno en uno
+13) for i in range(0,10):
+         print(str(i + 1))
+       i = 1
+       while i  <= 10:
+         print(i)
+         i = i +1
+14) spam.bacon()

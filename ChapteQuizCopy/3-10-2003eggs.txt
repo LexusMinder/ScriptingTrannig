@@ -1,0 +1,10 @@
+1) dictionario = {}
+2) dictionario = {"foo":42}
+    print(dictionario[foo])
+3) Que es la lista es un serie de elemtos ordenados y un diccionario no
+4) Se produce un key error, ya que el dic no tiene esa key
+5) NO hay diferencia, ambos mostraran los mismo, la unica diferencia es 
+que lo primero es mas corto
+6) Uno valida la existencia de la key y el otro del valor
+7) spam.setdefault("color", "black")
+8) pprint
