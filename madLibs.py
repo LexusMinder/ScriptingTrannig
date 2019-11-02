@@ -52,4 +52,4 @@ newText = replaceWord(text)
 createFile(newText)
 
 
-#Popis.98!@
+
