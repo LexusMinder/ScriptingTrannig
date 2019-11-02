@@ -1,1 +1,1 @@
-@py.exe C:\PythonScripts\runesScript.py %*
+@py.exe C:\PythonScripts\runesv3.pyw %*

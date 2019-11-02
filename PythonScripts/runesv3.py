@@ -10,10 +10,9 @@ champList = []
 def main():
     if len(sys.argv) > 1:
         global champList
-        option = sys.argv[1]
+        option = " ".join(sys.argv[1:])
         champList = sanitaze(openFile())
-        print(champList)
-        #verifyOption(option)
+        verifyOption(option)
     else:
         print("Usage rS [nombre de invocador|nombre de campeon]")
         sys.exit()
@@ -32,12 +31,16 @@ def openFile():
 #Funcion que abre el navegador dependiendo si es campeon o invocador
 def verifyOption(name):
     try:
-        name = name[0].upper() + name[1:]
         act = True
         for champ in champList:
             if name in champ:
+                if name == "Dr. Mundo":
+                    webbrowser.open("https://lan.op.gg/champion/drmundo")
+                    break
                 act = False
-                webbrowser.open("https://lan.op.gg/champion/" + name)
+                option = "".join(sys.argv[1:])
+                option = option.strip()
+                webbrowser.open("https://lan.op.gg/champion/" + option.lower())
                 break
         if act == True:
             webbrowser.open("https://lan.op.gg/summoner/userName=" + name)
