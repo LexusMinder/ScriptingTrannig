@@ -1,0 +1,11 @@
+ 2019-11-02 13:16:27,353 - DEBUG - 
+Inicio de programa
+ 2019-11-02 13:16:27,353 - DEBUG - [Main Function]
+ 2019-11-02 13:18:42,491 - DEBUG - Inicio de programa
+ 2019-11-02 13:18:42,491 - DEBUG - [Main Function]
+ 2019-11-02 13:18:42,521 - DEBUG - Fin del programa
+
+ 2019-11-02 13:27:45,018 - DEBUG - Inicio de programa
+ 2019-11-02 13:27:45,018 - DEBUG - [Main Function]
+ 2019-11-02 13:27:45,049 - DEBUG - Fin del programa
+
