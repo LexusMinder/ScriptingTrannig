@@ -1,23 +1,24 @@
 #! python3
 # deletingFiles.py - Borra archivos con un tamaño excesivo
 
-import sys, logging, os
+import sys, logging, os, traceback
+
+logging.disable(logging.CRITICAL)
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
-
 #Main function
 def main():
+    logging.disable(logging.INFO)
     logging.debug("Start main function")
 
     directory = getInput("Introduce the path of the folder: ") # Get the input of the us
 
     dirVerified = verifyDir(directory) # Verified the direcory is a dir
 
-    search = checkFiles(dirVerified) 
-    
-    logging.info(dirVerified)
+    array = checkFiles(dirVerified) # Save a array with all enormous files
+
+    printArray(array)
 
     logging.debug("End main function")
 
@@ -29,6 +30,8 @@ def getInput(msg):
     try:
         var = input(msg) # save in a var the introduce by the user
 
+        var = var.strip() # Limpia espacios en blanco
+    
         return var
     
         logging.debug("End getInput function")
@@ -63,23 +66,29 @@ def verifyDir(directory):
 #Main function
 def checkFiles(directory):
     try:
+        foundedFiles = []
+        print("The folder is target " + directory)
         for foldername, subfolders, filenames in os.walk(directory):
-            print("The analyzed folder is " + foldername)
+            #print("The analyzed folder is " + foldername)
 
             for filename in filenames:
-                path = foldername + filename
+                path = foldername + "\\" +  filename
                 size = checkSize(path)
 
                 if size > 100000000:
-                    print("The founded file: " + path)
+                    foundedFiles += [path]
+                    
+                    #logging.info(foundedFiles)
+        return foundedFiles
     except Exception as err:
         logging.error(str(err))
+        #loggin.inf(tracbak.format_exc())
         print("An error has occurred of type: " + str(err))
         sys.exit()
 
 def checkSize(directory):
     try:
-        logging.disable(logging.debug)
+        logging.disable(logging.DEBUG)
         logging.debug("Start checkSize() function")
         size = int(os.path.getsize(directory))
         
@@ -89,6 +98,16 @@ def checkSize(directory):
     except Exception as err:
         print("An error has occurred of type: " + str(err))
         sys.exit()
+
+def removeFiles(array):
+    for element in array:
+        os.unlink(element)    
+
+def printArray(array):
+    print("Files removed")
+    for i in range(len(array)):
+        
+        print("File " + str(i) + ": " + array[i])
 
 if __name__ == "__main__":
     main()
